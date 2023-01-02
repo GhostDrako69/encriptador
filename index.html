@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador ALURA</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+
+<body>
+    <header>
+        <div class="caja">
+            <h1><img src="imagenes/logo.png"></h1>
+        </div>
+    </header>
+    <main>
+        <div class="textoIngresado">
+            <textarea class="ingresaTexto" id="ingresaTexto" placeholder="Ingresa el texto aquí" ></textarea>
+        </div>
+        <div class="bordeMensaje">
+                <textarea class="resultadoTexto" name="resultadoTexto" id="resultadoTexto" cols="40" rows="6"></textarea>
+                <img src="imagenes/Muñeco.png" class="imagenEncripta">
+                <p class="mensajeTraducido">Ningún mensaje fue encontrado</p>
+                <p class="mensajeAviso"> Ingresa el texto que desees encriptar o desencriptar</p>
+             <div>
+                <button class="botonCopiar" onclick="copiar()">Copiar</button>
+            </div>   
+        </div>
+    <section class="informa">
+        <img class="ico-informa" src="imagenes/exclamacion.png" alt="informacion">
+        <p class="text-informa">Solo letras minúsculas y sin acento</p>
+    </section>
+    <section class="button">
+        <button class="botonEncriptar" onclick="cifrar()">Encriptar</button>
+        <button class="botonDesencriptar" onclick="regresaTexto()">Desencriptar</button>
+    </section>
+      </main>
+
+
+      <script>
+        function cifrar() {
+            var texto1 = document.getElementById("ingresaTexto").value;
+            texto1 = texto1.replace(/e/g, 'enter');  
+            texto1 = texto1.replace(/i/g, 'imes');
+            texto1 = texto1.replace(/a/g, 'ai');              
+            texto1 = texto1.replace(/o/g, 'ober');
+            texto1 = texto1.replace(/u/g, 'ufat');
+            document.getElementById("ingresaTexto").value = '';
+            resultadoTexto.value = texto1;
+        }
+      
+        function regresaTexto(){
+            var texto1 = document.getElementById("ingresaTexto").value;
+            texto1 = texto1.replace(/ai/g, 'a');
+            texto1 = texto1.replace(/imes/g, 'i');
+            texto1 = texto1.replace(/enter/g, 'e');       
+            texto1 = texto1.replace(/ober/g, 'o');
+            texto1 = texto1.replace(/ufat/g, 'u');
+            document.getElementById("ingresaTexto").value = '';
+            resultadoTexto.value = texto1;
+        }
+        
+        
+        function copiar() {
+                    resultadoTexto.select();
+                    document.execCommand('copy');
+        }
+
+
+        </script>
+    </body>
+</html>

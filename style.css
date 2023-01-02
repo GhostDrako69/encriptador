@@ -1,0 +1,159 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: #fdfafa;
+    padding: 20px 0;
+}
+
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 0 auto;
+}
+
+.bordeMensaje{
+    display: block;
+    width: 350px;
+    height: 500px;
+    margin: 0 0 0 900px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.imagenEncripta{
+    width: 200px;
+    padding: 10%;
+    margin: 0 30px auto;
+}
+
+.textoIngresado{
+    float: left;
+}
+
+.ingresaTexto{
+    width: 680px;
+    height: 330px;
+    font-size: 200%;
+    font-family: var;
+    color: blue;
+    box-sizing: border-box;
+    margin: 0 100px auto;
+    border: none;
+}
+
+.resultadoTexto{
+    border: none;
+}
+
+.mensajeTraducido{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.mensajeAviso{
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+}
+
+.informa{
+    padding: 1px;
+    margin: 0 130px auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.text-informa{
+    font-size: 1rem;
+    color: grey
+}
+
+.button{
+    width: 680px;
+    display:inline-block;
+    margin: 0 120px auto;
+    align-items: center;
+    gap: 16px;
+}
+
+.botonEncriptar{
+  width: 30%;
+  height: 100%;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 29px;
+  text-align: center;
+  border-radius: 24px;
+  color: #ffffff;
+  background-color: #0a3871;
+  cursor: pointer;
+  transition: 1s all;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.botonDesencriptar{
+    width: 30%;
+    height: 100%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 29px;
+    text-align: center;
+    border-radius: 24px;
+    color: #ffffff;
+    background-color: #0a3871;
+    cursor: pointer;
+    transition: 1s all;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1; 
+}
+
+.botonCopiar{
+    width: 70%;
+    height: 10%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 29px;
+    text-align: center;
+    border-radius: 24px;
+    color: #ffffff;
+    background-color: #0a3871;
+    cursor: pointer;
+    transition: 1s all;
+    margin: 0 50px auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1; 
+}
+
+
+@media screen and (max-width:480px){
+    h1{
+        text-align: center;
+    }
+    nav{
+        position: static;
+    }
+    .caja, .principal, .mapa-contenido, .contenido-diferenciales, .video{
+        width: auto;
+    }
+
+    .lista-diferenciales,.imagen-diferenciales{
+        width: 100%;
+    }
+   
+}
